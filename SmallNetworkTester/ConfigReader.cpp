@@ -50,12 +50,8 @@ std::string ConfigReader::Read(std::string configField)
 				if (current_char == '=')
 				{
 					track_chars_now = true;
-				}
-
-				
+				}	
 			}
-
-
 		}
 	}
 
