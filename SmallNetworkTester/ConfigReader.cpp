@@ -13,6 +13,7 @@ ConfigReader::~ConfigReader()
 }
 
 
+
 std::string ConfigReader::Read(std::string configField)
 {
 	std::string line;
@@ -21,34 +22,8 @@ std::string ConfigReader::Read(std::string configField)
 
 	while (getline(f, line))
 	{
-		std::vector<char> field_check_char_vector;
-		std::vector<char> line_char_vector;
-		std::copy(line.begin(), line.end(), std::back_inserter(line_char_vector));
-
-		bool found_char = false;
-		int char_tracker = 0;
-
-		do
-		{
-			char current_char = line_char_vector[char_tracker];
-
-			if (current_char == '=')
-			{
-				found_char = true;
-			}
-			else
-			{
-				field_check_char_vector.push_back(current_char);
-				char_tracker++;
-			}
-
-		} while (!found_char);
-	
-
-
-		/*
 		// check if field is found in the given line
-		if (line.find(configField) != std::string::npos) 
+		if (line.find(configField) != std::string::npos)
 		{
 			// save line length
 			int line_length = line.length();
@@ -76,11 +51,9 @@ std::string ConfigReader::Read(std::string configField)
 				if (current_char == '=')
 				{
 					track_chars_now = true;
-				}	
+				}
 			}
-			
 		}
-		*/
 	}
 
 	return std::string(return_char_vector.begin(), return_char_vector.end());;
