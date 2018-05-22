@@ -1,0 +1,2 @@
+ProgramTitle=My Test Program
+ProgramDeveloper=Simeon L. Dahl
