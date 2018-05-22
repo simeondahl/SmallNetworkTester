@@ -13,7 +13,7 @@ ConfigReader::~ConfigReader()
 }
 
 
-std::string ConfigReader::ReadConf(std::string configField)
+std::string ConfigReader::Read(std::string configField)
 {
 	std::string line;
 	std::ifstream f(_CONFIG_FILE_);
